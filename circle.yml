@@ -15,4 +15,4 @@ dependencies:
 
 test:
   override:
-    - docker run -it -v $(pwd)/packages:/packages gliderlabs/alpine:3.2 sh -c " apk -U add --allow-untrusted --upgrade /packages/builder/x86_64/*.apk"
+    - docker run -it -v $(pwd)/packages:/packages gliderlabs/alpine:3.2 sh -c " apk -U add --no-progress --upgrade /packages/builder/x86_64/*.apk"
