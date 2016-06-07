@@ -8,6 +8,8 @@ machine:
 
 dependencies:
   pre:
+    - git fetch --tags
+    - go get github.com/tcnksm/ghr
     - mkdir packages
     - echo -e "$RSA_PUBLIC_KEY" > packages/sgerrand.rsa.pub
   override:
@@ -28,5 +30,5 @@ deployment:
     branch: master
     owner: sgerrand
     commands:
-      - ghr -u sgerrand --prerelease --delete unreleased packages || return 0
+      - ghr -u sgerrand --prerelease --delete unreleased packages
       - ghr -u sgerrand --prerelease unreleased packages/builder/x86_64
