@@ -12,8 +12,8 @@ depends_dev="pcre-dev perl readline-dev"
 makedepends="$depends_dev autoconf automake gfortran"
 install=""
 subpackages="$pkgname-dev $pkgname-doc"
-source="https://cran.rstudio.com/src/base/R-3/R-$pkgver.tar.gz
-        glibc-0001-disable-stack-end.patch"
+source="https://cran.rstudio.com/src/base/$pkgname-${pkgver:0:1}/$pkgname-$pkgver.tar.gz
+        10-glibc-disable-stack-end.patch"
 
 _builddir="$srcdir/$pkgname-$pkgver"
 
@@ -21,7 +21,7 @@ prepare() {
 	cd "$_builddir"
 	for i in $source; do
 		case $i in
-		glibc-*.patch)
+		*.patch)
 			msg "Applying ${i}"; patch -p2 -i "$srcdir/$i" || return 1;;
 		esac
 	done
@@ -61,9 +61,9 @@ doc() {
 	done
 }
 
-md5sums="e08cf33ce894ba9b3ac1fb8e9123a51f  glibc-0001-disable-stack-end.patch
-1ba3dac113efab69e706902810cc2970  R-3.2.3.tar.gz"
-sha256sums="0a9497000dcb09abe9b72610b99629278e03e9167ae4a964916e08852ca774a5  glibc-0001-disable-stack-end.patch
-b93b7d878138279234160f007cb9b7f81b8a72c012a15566e9ec5395cfd9b6c1  R-3.2.3.tar.gz"
-sha512sums="eb998805149137e18b2e5c8213e649aaa85b5076d9fbf744cc9a7544b9dc47bc51bbf470b18577c3a10430293ea58c3b056ffe6153c47716b868100cf6e2a95a  glibc-0001-disable-stack-end.patch
-9d7294af860204f4d84e25eb503111c9607beedbc42f01de073c915945a6342c3e24e25a9cc038a2e58442036bee931975d93dc327081ed02afe5ffa365170ea  R-3.2.3.tar.gz"
+md5sums="1ba3dac113efab69e706902810cc2970  R-3.2.3.tar.gz
+4368a6983cf584d666c51aa61d680209  10-glibc-disable-stack-end.patch"
+sha256sums="b93b7d878138279234160f007cb9b7f81b8a72c012a15566e9ec5395cfd9b6c1  R-3.2.3.tar.gz
+26a00af590550a19d6a2c3e21ce932de6722300d1dd18729bdfa16b57da23242  10-glibc-disable-stack-end.patch"
+sha512sums="9d7294af860204f4d84e25eb503111c9607beedbc42f01de073c915945a6342c3e24e25a9cc038a2e58442036bee931975d93dc327081ed02afe5ffa365170ea  R-3.2.3.tar.gz
+a1b3d9ad70dc77a649f0b56e1080e2f833e7eba23408ee710d372bfde06eb651418c78f640554743666c812eb0d268e0db48b2cbf038481c9ede46e4d4f43c3e  10-glibc-disable-stack-end.patch"
