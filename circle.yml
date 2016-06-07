@@ -16,3 +16,17 @@ dependencies:
 test:
   override:
     - docker run -it -v $(pwd)/packages:/packages gliderlabs/alpine:3.3 sh -c " apk -U add --allow-untrusted --upgrade /packages/builder/x86_64/*.apk"
+
+deployment:
+  release:
+    tag: /[0-9]+(\.[0-9]+){1,2}(\-r\d+)?$/
+    owner: sgerrand
+    commands:
+      - ghr -u sgerrand $CIRCLE_TAG packages/
+      - ghr -u sgerrand $CIRCLE_TAG packages/builder/x86_64
+  master:
+    branch: master
+    owner: sgerrand
+    commands:
+      - ghr -u sgerrand --prerelease --delete unreleased packages || return 0
+      - ghr -u sgerrand --prerelease unreleased packages/builder/x86_64
