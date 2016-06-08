@@ -1,14 +1,14 @@
 # Contributor: Sasha Gerrand <alpine-pkg-R@sgerrand.com>
 # Maintainer: Sasha Gerrand <alpine-pkg-R@sgerrand.com>
 pkgname=R
-pkgver=3.2.5
+pkgver=3.3.0
 pkgrel=0
 pkgdesc="R is a system for statistical computation and graphics"
 url="https://www.r-project.org"
 arch="all"
 license="GPL2"
 depends=""
-depends_dev="pcre-dev perl readline-dev"
+depends_dev="bzip2-dev ca-certificates curl-dev pcre-dev perl readline-dev xz-dev zlib-dev"
 makedepends="$depends_dev autoconf automake gfortran"
 install=""
 subpackages="$pkgname-dev $pkgname-doc"
@@ -61,9 +61,9 @@ doc() {
 	done
 }
 
-md5sums="7b23ee70cfb383be3bd4360e3c71d8c3  R-3.2.5.tar.gz
+md5sums="5a7506c8813432d1621c9725e86baf7a  R-3.3.0.tar.gz
 4368a6983cf584d666c51aa61d680209  10-glibc-disable-stack-end.patch"
-sha256sums="60745672dce5ddc201806fa59f6d4e0ba6554d8ed78d0f9f0d79a629978f80b5  R-3.2.5.tar.gz
+sha256sums="9256b154b1a5993d844bee7b1955cd49c99ad72cef03cce3cd1bdca1310311e4  R-3.3.0.tar.gz
 26a00af590550a19d6a2c3e21ce932de6722300d1dd18729bdfa16b57da23242  10-glibc-disable-stack-end.patch"
-sha512sums="aff7efa84188dfdd486d48095fadb9fbe1ab5897f9f924b9956d21d955d7cba9e50c1d21af6cca8327af8d1465b10761526a3a3be357c08a536831e7f5fc290b  R-3.2.5.tar.gz
+sha512sums="81e9ef761bee4d9322ca785fbed843ab13c2f5b55be769d982a81a7e7694e03980cbc7ee067fc850bd7a17ab65d93be81f27db50d428665773174c690383d4cc  R-3.3.0.tar.gz
 a1b3d9ad70dc77a649f0b56e1080e2f833e7eba23408ee710d372bfde06eb651418c78f640554743666c812eb0d268e0db48b2cbf038481c9ede46e4d4f43c3e  10-glibc-disable-stack-end.patch"
