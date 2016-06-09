@@ -37,6 +37,7 @@ build() {
 		--mandir=/usr/share/man \
 		--localstatedir=/var \
 		--disable-java \
+		--enable-utf8 \
 		--without-x \
 		|| return 1
 	make || return 1
