@@ -13,7 +13,8 @@ makedepends="$depends_dev autoconf automake gfortran"
 install=""
 subpackages="$pkgname-dev $pkgname-doc"
 source="https://cran.rstudio.com/src/base/$pkgname-${pkgver:0:1}/$pkgname-$pkgver.tar.gz
-        10-glibc-disable-stack-end.patch"
+        10-glibc-disable-stack-end.patch
+        20-add-aix-to-r-extra-cpp-flags.patch"
 
 _builddir="$srcdir/$pkgname-$pkgver"
 
@@ -62,8 +63,11 @@ doc() {
 }
 
 md5sums="7b23ee70cfb383be3bd4360e3c71d8c3  R-3.2.5.tar.gz
-4368a6983cf584d666c51aa61d680209  10-glibc-disable-stack-end.patch"
+4368a6983cf584d666c51aa61d680209  10-glibc-disable-stack-end.patch
+d7796bd9163b5c170eef82db94ff7e3b  20-add-aix-to-r-extra-cpp-flags.patch"
 sha256sums="60745672dce5ddc201806fa59f6d4e0ba6554d8ed78d0f9f0d79a629978f80b5  R-3.2.5.tar.gz
-26a00af590550a19d6a2c3e21ce932de6722300d1dd18729bdfa16b57da23242  10-glibc-disable-stack-end.patch"
+26a00af590550a19d6a2c3e21ce932de6722300d1dd18729bdfa16b57da23242  10-glibc-disable-stack-end.patch
+6ac8cad03856407e0f036fa419b9a1e5fa5ec549c9bd25180fb6425ca1e9b799  20-add-aix-to-r-extra-cpp-flags.patch"
 sha512sums="aff7efa84188dfdd486d48095fadb9fbe1ab5897f9f924b9956d21d955d7cba9e50c1d21af6cca8327af8d1465b10761526a3a3be357c08a536831e7f5fc290b  R-3.2.5.tar.gz
-a1b3d9ad70dc77a649f0b56e1080e2f833e7eba23408ee710d372bfde06eb651418c78f640554743666c812eb0d268e0db48b2cbf038481c9ede46e4d4f43c3e  10-glibc-disable-stack-end.patch"
+a1b3d9ad70dc77a649f0b56e1080e2f833e7eba23408ee710d372bfde06eb651418c78f640554743666c812eb0d268e0db48b2cbf038481c9ede46e4d4f43c3e  10-glibc-disable-stack-end.patch
+e422ac15b558de684ec3357f71ff5c6a488bee97de6c19b3f6efa230015716e05d4e07ed5b0add411ed16be53c9d019cdc7174f1c997e8ab11af98e6246439dd  20-add-aix-to-r-extra-cpp-flags.patch"
