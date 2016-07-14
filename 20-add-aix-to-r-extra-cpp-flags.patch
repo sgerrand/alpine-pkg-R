@@ -1,5 +1,5 @@
---- src/R-3.2.3/etc/Makeconf.in
-+++ src/R-3.2.3/etc/Makeconf.in
+--- a/etc/Makeconf.in
++++ b/etc/Makeconf.in
 @@ -114,7 +114,7 @@
  STATIC_LIBR = @WANT_R_STATIC_TRUE@ @STATICR1@ "$(R_HOME)/lib$(R_ARCH)/libR.a" @STATICR2@ $(BLAS_LIBS) $(FLIBS) @R_XTRA_LIBS@ $(LIBINTL) @READLINE_LIBS@ $(LIBS)
  
