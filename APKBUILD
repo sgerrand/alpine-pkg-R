@@ -2,7 +2,7 @@
 # Maintainer: Sasha Gerrand <alpine-pkg-R@sgerrand.com>
 pkgname=R
 pkgver=3.2.3
-pkgrel=1
+pkgrel=2
 pkgdesc="R is a system for statistical computation and graphics"
 url="https://www.r-project.org"
 arch="all"
