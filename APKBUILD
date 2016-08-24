@@ -37,6 +37,7 @@ build() {
 		--sysconfdir=/etc \
 		--mandir=/usr/share/man \
 		--localstatedir=/var \
+		--enable-R-static-lib \
 		--disable-java \
 		--without-x \
 		|| return 1
