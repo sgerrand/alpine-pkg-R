@@ -15,8 +15,8 @@ The current installation method for these packages is to pull them in using
 
     apk --no-cache add ca-certificates wget
     wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-R/master/sgerrand.rsa.pub
-    wget https://github.com/sgerrand/alpine-pkg-R/releases/download/3.2.5-r1/R-3.2.5-r1.apk
-    apk add R-3.2.5-r1.apk
+    wget https://github.com/sgerrand/alpine-pkg-R/releases/download/3.2.5-r2/R-3.2.5-r2.apk
+    apk add R-3.2.5-r2.apk
 
 [r-project]: http://www.r-project.org/
 [releases]: https://github.com/sgerrand/alpine-pkg-R/releases/
