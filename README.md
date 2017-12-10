@@ -1,22 +1,12 @@
 # alpine-pkg-R
 
-[![CircleCI](https://img.shields.io/circleci/project/sgerrand/alpine-pkg-R/master.svg)](https://circleci.com/gh/sgerrand/alpine-pkg-R)
-
 The [R project][r-project], compiled as an Alpine Linux package.
 
-## Releases
+## Deprecated
 
-See the [releases page][releases] for the latest download links.
-
-## Installing
-
-The current installation method for these packages is to pull them in using
-`wget` or `curl` and install the local file with `apk`:
-
-    apk --no-cache add ca-certificates wget
-    wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://github.com/sgerrand/alpine-pkg-R/releases/download/3.3.1-r0/sgerrand.rsa.pub
-    wget https://github.com/sgerrand/alpine-pkg-R/releases/download/3.3.1-r0/R-3.3.1-r0.apk
-    apk add R-3.3.1-r0.apk
+An official [R package][r-package-search] has been available in the
+community repository of Alpine Linux since version 3.5. Please install
+that package instead.
 
 [r-project]: http://www.r-project.org/
-[releases]: https://github.com/sgerrand/alpine-pkg-R/releases/
+[r-package-search]: https://pkgs.alpinelinux.org/packages?name=R&branch=&repo=&arch=&maintainer=
